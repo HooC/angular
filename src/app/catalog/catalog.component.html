@@ -1,0 +1,7 @@
+<h3>{{title}}</h3>
+
+<app-user
+      *ngFor="let item of users"
+      [card]="item"
+      (click)="handler(item)"
+    ></app-user>

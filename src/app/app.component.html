@@ -1,14 +1,20 @@
 <div class="container">
-  <h1>{{title}}</h1>
-    
-    
+  <h1>Angular Project</h1>
+  
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Logo</a>
+
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="">Home</a></li>
+        <li routerLinkActive="active"><a routerLink="catalog">Catalog</a></li>
+        <li routerLinkActive="active"><a routerLink="product">User</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <div class="row">
-    <app-user
-      *ngFor="let item of users"
-      [card]="item"
-      (click)="handler(item)"
-    ></app-user>
+    <router-outlet></router-outlet>
   </div>
 </div>
 
